@@ -20,12 +20,11 @@
         android:label="fragment_on_boarding"
         tools:layout="@layout/fragment_on_boarding" >
         <action
-            android:id="@+id/action_onBoardingFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            android:id="@+id/action_onBoardingFragment_to_cargoListFragment"
+            app:destination="@id/cargoListFragment" />
     </fragment>
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="com.example.cargoapp.MainFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        android:id="@+id/cargoListFragment"
+        android:name="com.example.cargoapp.CargoListFragment"
+        android:label="CargoListFragment" />
 </navigation>
