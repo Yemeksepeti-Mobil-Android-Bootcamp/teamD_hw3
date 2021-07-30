@@ -1,4 +1,4 @@
-package com.example.cargo
+package com.example.cargoapp.ListFragment
 
 data class Item (
     var firstPoint: String,

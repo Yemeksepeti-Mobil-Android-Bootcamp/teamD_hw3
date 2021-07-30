@@ -3,12 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent" />
+
+    <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+        android:id="@+id/wormDots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:dotsColor="@color/PrimaryColor"
+        app:dotsCornerRadius="8dp"
+        android:layout_margin="20dp"
+        app:dotsSize="16dp"
+        app:dotsSpacing="4dp"
+        app:dotsStrokeColor="@color/PrimaryColor"
+        app:dotsStrokeWidth="2dp" />
 
 </FrameLayout>

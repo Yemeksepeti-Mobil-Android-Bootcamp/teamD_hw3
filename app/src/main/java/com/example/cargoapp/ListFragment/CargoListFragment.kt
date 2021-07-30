@@ -1,4 +1,4 @@
-package com.example.cargoapp
+package com.example.cargoapp.ListFragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,9 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cargo.CargoRecyclerViewAdapter
-import com.example.cargo.Item
+import com.example.cargoapp.ListFragment.Item
 import com.example.cargoapp.databinding.FragmentCargoListBinding
-import com.example.cargoapp.databinding.FragmentSplashBinding
 
 class CargoListFragment: Fragment() {
     private var _binding: FragmentCargoListBinding? = null
@@ -30,8 +29,10 @@ class CargoListFragment: Fragment() {
     private fun setData() {
         val data = ArrayList<Item>()
         for (i in 0..100) {
-            data.add(Item("Rancho Santa Margarita,CA $i", "Baja California,CA - $i",
-                "Oktay Ağca $i","Kodluyoruz  $i","Jun 09, 13.40","Jun 09, 13.40"))
+            data.add(
+                Item("Rancho Santa Margarita,CA $i", "Baja California,CA - $i",
+                "Oktay Ağca $i","Kodluyoruz  $i","Jun 09, 13.40","Jun 09, 13.40")
+            )
         }
         adapter.setFoodList(data)
     }

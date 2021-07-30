@@ -3,22 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Onboarding.SecondOnBoardingFragment"
+    tools:context=".Onboarding.ThirdOnBoardingFragment"
     android:background="@color/teal_700">
-
 
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:src="@drawable/ic_mailsentbro"/>
+        android:src="@drawable/ic_deliverybro"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/on_the_way"
+        android:text="@string/delivered"
         android:layout_below="@+id/imageView"
         android:textSize="20sp"
         android:textStyle="bold"

@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">cargoApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="load_cargo">Your cargo is carefully loaded into the vehicle to be delivered to you</string>
+    <string name="on_the_way">Your cargo is on its way to be delivered to you</string>
+    <string name="delivered">Your cargo is delivered to you quickly and safely</string>
+
 </resources>
