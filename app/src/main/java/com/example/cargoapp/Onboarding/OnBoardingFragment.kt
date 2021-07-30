@@ -1,5 +1,6 @@
 package com.example.cargoapp.Onboarding
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -40,12 +41,20 @@ class OnBoardingFragment : Fragment() {
 
             //Eğer son onboarding sayfasına geldiyse diye kontrol ediyoruz.
             if (binding.viewPager2.currentItem == adapter.itemCount-1) {
+                onBoardingFinished()
                 findNavController().navigate(R.id.action_onBoardingFragment_to_mainFragment)
             } else {
                 binding.viewPager2.currentItem = binding.viewPager2.currentItem + 1
             }
 
         }
+    }
+
+    private fun onBoardingFinished() {
+        val sharedPref = requireActivity().getSharedPreferences("onboarding", Context.MODE_PRIVATE)
+        val editor = sharedPref.edit()
+        editor.putBoolean("finished", true)
+        editor.apply()
     }
 
     override fun onDestroyView() {

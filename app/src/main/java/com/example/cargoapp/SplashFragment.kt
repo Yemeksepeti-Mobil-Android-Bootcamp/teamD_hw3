@@ -1,6 +1,7 @@
 package com.example.cargoapp
 
 import android.animation.Animator
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -35,7 +36,11 @@ class SplashFragment : Fragment() {
             }
 
             override fun onAnimationEnd(animation: Animator?) {
-                findNavController().navigate(R.id.action_splashFragment_to_onBoardingFragment)
+                if(isOnboardingFinished()) {
+                    findNavController().navigate(R.id.action_splashFragment_to_mainFragment)
+                }else{
+                    findNavController().navigate(R.id.action_splashFragment_to_onBoardingFragment)
+                }
             }
 
             override fun onAnimationCancel(animation: Animator?) {
@@ -46,6 +51,12 @@ class SplashFragment : Fragment() {
                 Log.v("Animation","Repeated")
             }
         })
+    }
+
+    private fun isOnboardingFinished(): Boolean {
+        //To set up a shared preferences structure and check for Onboarding to show once after running
+        val sharedPref = requireActivity().getSharedPreferences("onboarding", Context.MODE_PRIVATE)
+        return sharedPref.getBoolean("finished", false)
     }
 
     override fun onDestroyView() {
