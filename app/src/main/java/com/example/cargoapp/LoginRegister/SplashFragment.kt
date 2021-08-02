@@ -1,4 +1,4 @@
-package com.example.cargoapp
+package com.example.cargoapp.LoginRegister
 
 import android.animation.Animator
 import android.content.Context
@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.cargoapp.R
 import com.example.cargoapp.databinding.FragmentSplashBinding
 
 
@@ -37,7 +38,7 @@ class SplashFragment : Fragment() {
 
             override fun onAnimationEnd(animation: Animator?) {
                 if(isOnboardingFinished()) {
-                    findNavController().navigate(R.id.action_splashFragment_to_mainFragment)
+                    findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
                 }else{
                     findNavController().navigate(R.id.action_splashFragment_to_onBoardingFragment)
                 }

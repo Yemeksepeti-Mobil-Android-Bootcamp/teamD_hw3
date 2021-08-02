@@ -42,7 +42,7 @@ class OnBoardingFragment : Fragment() {
             //Eğer son onboarding sayfasına geldiyse diye kontrol ediyoruz.
             if (binding.viewPager2.currentItem == adapter.itemCount-1) {
                 onBoardingFinished()
-                findNavController().navigate(R.id.action_onBoardingFragment_to_mainFragment)
+                findNavController().navigate(R.id.action_onBoardingFragment_to_loginFragment)
             } else {
                 binding.viewPager2.currentItem = binding.viewPager2.currentItem + 1
             }

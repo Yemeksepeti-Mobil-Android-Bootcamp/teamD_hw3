@@ -5,7 +5,6 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.cargoapp.ListFragment.CargoListFragment
 import com.example.cargoapp.Onboarding.FirstOnBoardingFragment
-import com.example.cargoapp.Onboarding.SecondOnBoardingFragment
 
 
 private const val FRAGMENT_COUNT = 2
@@ -18,7 +17,7 @@ class MainFragmentAdapter(requireActivity: FragmentActivity) : FragmentStateAdap
     override fun createFragment(position: Int): Fragment {
         return when (position) {
             0 -> CargoListFragment()
-            1 -> SecondOnBoardingFragment()
+            1 -> CargoAddFragment()
             else -> FirstOnBoardingFragment()
         }
     }
