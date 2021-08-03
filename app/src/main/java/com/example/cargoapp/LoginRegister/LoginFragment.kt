@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.example.cargoapp.MVVM.CargoRepository
 import com.example.cargoapp.R
 import com.example.cargoapp.databinding.FragmentLoginBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -110,6 +111,12 @@ class LoginFragment : Fragment() {
                         // Sign in success, update UI with the signed-in user's information
                         Log.d(TAG, "signInWithCredential:success")
                         val user = auth.currentUser
+
+                        val cargoRepository = CargoRepository()
+                        if (user != null) {
+                            cargoRepository.writeNewUser(user.uid)
+                        }
+
                     } else {
                         // If sign in fails, display a message to the user.
                         Log.w(TAG, "signInWithCredential:failure", task.exception)
