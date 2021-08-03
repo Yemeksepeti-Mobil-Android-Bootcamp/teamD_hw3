@@ -33,8 +33,6 @@ class MainFragment : Fragment() {
 
         val adapter = MainFragmentAdapter(requireActivity())
 
-        binding.viewPager2.adapter = adapter
-        binding.wormDots.setViewPager2(binding.viewPager2)
 
     }
 
