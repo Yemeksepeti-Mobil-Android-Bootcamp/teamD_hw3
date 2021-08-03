@@ -7,7 +7,7 @@ import com.example.cargoapp.ListFragment.CargoListFragment
 import com.example.cargoapp.Onboarding.FirstOnBoardingFragment
 
 
-private const val FRAGMENT_COUNT = 2
+private const val FRAGMENT_COUNT = 3
 
 class MainFragmentAdapter(requireActivity: FragmentActivity) : FragmentStateAdapter(requireActivity) {
 
@@ -16,9 +16,18 @@ class MainFragmentAdapter(requireActivity: FragmentActivity) : FragmentStateAdap
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
-            0 -> CargoListFragment()
-            1 -> CargoAddFragment()
-            else -> FirstOnBoardingFragment()
+            0 ->{
+                CargoListFragment()
+            }
+            1 ->{
+                CargoAddFragment()
+            }
+            2 ->{
+                ProfileFragment()
+            }
+            else -> {
+                FirstOnBoardingFragment()
+            }
         }
     }
 

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:text="Personal Information"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:backgroundTint="@color/PrimaryColor"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="90dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Name"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="20dp"/>
+        <View android:background="#ffffff"
+            android:layout_width = "match_parent"
+            android:layout_marginTop="50dp"
+            android:layout_height="0.5dp"
+            android:backgroundTint="@color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="15dp"
+            android:text="Surname"
+            android:textSize="20dp"/>
+        <View android:background="#ffffff"
+            android:layout_width = "match_parent"
+            android:layout_marginTop="100dp"
+            android:layout_height="0.5dp"
+            android:backgroundTint="@color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Identity No"
+            android:layout_marginTop="110dp"
+            android:textSize="20dp"
+            android:layout_marginLeft="15dp"/>
+        <View android:background="#ffffff"
+            android:layout_width = "match_parent"
+            android:layout_marginTop="150dp"
+            android:layout_height="0.5dp"
+            android:backgroundTint="@color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textSize="20dp"
+            android:text="E-mail"
+            android:layout_marginTop="160dp"
+            android:layout_marginLeft="15dp"/>
+        <View android:background="#ffffff"
+            android:layout_width = "match_parent"
+            android:layout_marginTop="200dp"
+            android:layout_height="0.5dp"
+            android:backgroundTint="@color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Phone Number"
+            android:textSize="20dp"
+            android:layout_marginTop="210dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="20dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</FrameLayout>
