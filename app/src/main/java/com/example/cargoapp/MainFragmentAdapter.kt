@@ -5,14 +5,12 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.cargoapp.ListFragment.CargoListFragment
 import com.example.cargoapp.Onboarding.FirstOnBoardingFragment
-import com.example.cargoapp.databinding.FragmentMainBinding
 
 
-private const val FRAGMENT_COUNT = 2
+private const val FRAGMENT_COUNT = 3
 
 class MainFragmentAdapter(requireActivity: FragmentActivity) : FragmentStateAdapter(requireActivity) {
-    private var _binding: FragmentMainBinding? = null
-    private val binding get() = _binding!!
+
 
     override fun getItemCount(): Int = FRAGMENT_COUNT
 
@@ -23,6 +21,9 @@ class MainFragmentAdapter(requireActivity: FragmentActivity) : FragmentStateAdap
             }
             1 ->{
                 CargoAddFragment()
+            }
+            2 ->{
+                ProfileFragment()
             }
             else -> {
                 FirstOnBoardingFragment()

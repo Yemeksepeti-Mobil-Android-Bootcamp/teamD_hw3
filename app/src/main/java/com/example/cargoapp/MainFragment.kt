@@ -46,6 +46,7 @@ class MainFragment : Fragment() {
                 }
                 2->{
                     Toast.makeText(this.context,"SettingFragment",Toast.LENGTH_SHORT).show()
+                    binding.viewPager2.currentItem = 2
                 }
                 else ->{
                     Toast.makeText(this.context,"HomeFragment",Toast.LENGTH_SHORT).show()

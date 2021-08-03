@@ -2,8 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragment_recepient_adresses">
+    android:layout_height="match_parent">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -14,7 +13,6 @@
         android:text="Recepient Adresses"
         android:textSize="20dp"
         android:textColor="@color/white"
-        android:background="@drawable/border"
         android:backgroundTint="@color/PrimaryColor"
         />
     <SearchView
@@ -22,8 +20,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="80dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/rounded_corner"/>
+        android:layout_marginRight="10dp" />
 
 
     <View android:background="#ffffff"
@@ -44,11 +41,9 @@
         android:layout_height="90dp"
         android:layout_marginLeft="325dp"
         android:layout_marginTop="635dp"
-        android:background="@drawable/ring_border"
         android:backgroundTint="@color/PrimaryColor"
         android:text="+"
         android:textSize="30dp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/PrimaryColor" />
+        android:textStyle="bold" />
 
 </FrameLayout>

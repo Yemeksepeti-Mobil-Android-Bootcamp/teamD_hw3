@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment_profile">
+    tools:context=".ProfileFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -15,7 +15,6 @@
         android:backgroundTint="@color/PrimaryColor"
         android:textAlignment="center"
         android:paddingVertical="20dp"
-        android:background="@drawable/border"
         android:textColor="@color/white"/>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -25,15 +24,8 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         app:cardElevation="10dp"
-
         >
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="20dp"
-            android:background="@mipmap/ic_launcher"
-            />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -79,10 +71,9 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/chevron_right"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="300dp"
-            android:backgroundTint=""/>
+            android:layout_marginLeft="300dp" />
+
         <View android:background="#ffffff"
             android:layout_width = "match_parent"
             android:layout_marginTop="70dp"
@@ -102,10 +93,8 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/chevron_right"
             android:layout_marginTop="90dp"
-            android:layout_marginLeft="300dp"
-            android:backgroundTint=""/>
+            android:layout_marginLeft="300dp" />
         <View android:background="#ffffff"
             android:layout_width = "match_parent"
             android:layout_marginTop="140dp"
@@ -125,10 +114,8 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/chevron_right"
             android:layout_marginTop="160dp"
-            android:layout_marginLeft="300dp"
-            android:backgroundTint=""/>
+            android:layout_marginLeft="300dp" />
         <View android:background="#ffffff"
             android:layout_width = "match_parent"
             android:layout_marginTop="210dp"
@@ -149,10 +136,8 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/chevron_right"
             android:layout_marginTop="230dp"
-            android:layout_marginLeft="300dp"
-            android:backgroundTint=""/>
+            android:layout_marginLeft="300dp" />
         <View android:background="#ffffff"
             android:layout_width = "match_parent"
             android:layout_marginTop="280dp"
@@ -203,10 +188,8 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/chevron_right"
             android:layout_marginTop="370dp"
-            android:layout_marginLeft="300dp"
-            android:backgroundTint=""/>
+            android:layout_marginLeft="300dp" />
 
 
 

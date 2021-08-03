@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment_personal_information">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -13,7 +12,6 @@
         android:gravity="center"
         android:text="Personal Information"
         android:textColor="@color/white"
-        android:background="@drawable/border"
         android:textSize="20dp"
         android:backgroundTint="@color/PrimaryColor"/>
 
