@@ -59,7 +59,7 @@ class MainFragment : Fragment() {
     private fun mainFunc() {
 
         val adapter = MainFragmentAdapter(requireActivity())
-        binding.viewPager2.adapter = adapter
+
 
     }
 
