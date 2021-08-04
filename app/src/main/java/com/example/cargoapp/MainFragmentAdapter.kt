@@ -19,6 +19,7 @@ class MainFragmentAdapter(requireActivity: FragmentActivity) : FragmentStateAdap
                 CargoAddFragment()
             }
             1 ->{
+
                 CargoListFragment()
             }
             2 ->{

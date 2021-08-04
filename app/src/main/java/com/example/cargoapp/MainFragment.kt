@@ -48,9 +48,9 @@ class MainFragment : Fragment() {
                 }
                 else ->{
                     binding.viewPager2.currentItem = 1
-
                 }
             }
+
         }
     }
 

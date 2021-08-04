@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cargo.CargoRecyclerViewAdapter
 import com.example.cargoapp.ListFragment.Item
+import com.example.cargoapp.MVVM.CargoRepository
 import com.example.cargoapp.databinding.FragmentCargoListBinding
 
 class CargoListFragment: Fragment() {
@@ -27,14 +28,10 @@ class CargoListFragment: Fragment() {
     }
 
     private fun setData() {
-        val data = ArrayList<Item>()
-        for (i in 0..100) {
-            data.add(
-                Item("Rancho Santa Margarita,CA $i", "Baja California,CA - $i",
-                "Oktay Ağca $i","Kodluyoruz  $i","Jun 09, 13.40","Jun 09, 13.40")
-            )
+        val repository = CargoRepository()
+         repository.listCargo(){
+            adapter.setCargoList(it)
         }
-        adapter.setFoodList(data)
     }
 
     private fun initViews() {

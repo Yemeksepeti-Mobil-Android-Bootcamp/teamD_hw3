@@ -5,25 +5,27 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cargoapp.ListFragment.Item
 import com.example.cargoapp.databinding.ItemCargoBinding
+import com.example.cargoapp.model.Cargo
+import kotlin.math.log
 
 class CargoRecyclerViewAdapter:RecyclerView.Adapter<CargoRecyclerViewAdapter.CargoViewHolder>() {
     private lateinit var binding: ItemCargoBinding
-    private var cargoList = ArrayList<Item>()
-
+    private  var cargoList:List<Cargo> = mutableListOf()
 
     class CargoViewHolder(private val binding: ItemCargoBinding):RecyclerView.ViewHolder(binding.root){
-        fun setItem(item: Item) {
-            binding.senderTextView.text = item.sender
-            binding.receiverTextView.text = item.receiver
-            binding.arrivalDateTextView.text = item.arrivalDate
-            binding.destinationTextView.text = item.destination
-            binding.firstPointTextView.text = item.firstPoint
-            binding.releaseDateTextView.text = item.releaseDate
+        fun setItem(item: Cargo) {
+            binding.senderTextView.text = item.senderName
+            binding.receiverTextView.text = item.receiverName
+            binding.arrivalDateTextView.text = "asdad"
+            binding.destinationTextView.text = item.receiverAddress
+            binding.firstPointTextView.text = item.senderAddress
+            binding.releaseDateTextView.text = "asda"
         }
     }
 
-    fun setFoodList(cargoList: ArrayList<Item>) {
+    fun setCargoList(cargoList: List<Cargo>) {
         this.cargoList = cargoList
+        println(cargoList.size)
         notifyDataSetChanged()
     }
 
