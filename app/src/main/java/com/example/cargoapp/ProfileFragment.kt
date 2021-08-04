@@ -9,7 +9,7 @@ import com.example.cargoapp.databinding.FragmentProfileBinding
 
 
 class ProfileFragment: Fragment() {
-    class ProfileFragment : Fragment() {
+
         private var _binding: FragmentProfileBinding? = null
         private val binding get() = _binding!!
 
@@ -24,5 +24,5 @@ class ProfileFragment: Fragment() {
         }
 
 
-    }
+
 }

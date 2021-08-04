@@ -11,16 +11,15 @@ private const val FRAGMENT_COUNT = 3
 
 class MainFragmentAdapter(requireActivity: FragmentActivity) : FragmentStateAdapter(requireActivity) {
 
-
     override fun getItemCount(): Int = FRAGMENT_COUNT
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
             0 ->{
-                CargoListFragment()
+                CargoAddFragment()
             }
             1 ->{
-                CargoAddFragment()
+                CargoListFragment()
             }
             2 ->{
                 ProfileFragment()
