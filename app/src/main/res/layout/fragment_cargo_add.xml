@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:windowSoftInputMode="adjustResize"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".CargoAddFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/gonderen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="İletişim Bilgileri"
         android:textColor="@color/black"
         android:textSize="24dp"
@@ -20,7 +27,7 @@
         app:layout_constraintHorizontal_bias="0.126"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.046" />
+        app:layout_constraintVertical_bias="0.050000012" />
 
     <EditText
         android:id="@+id/editTextGonderenAdSoyad"
@@ -46,7 +53,6 @@
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
-        android:layout_marginEnd="22dp"
         android:background="@drawable/custom_input"
         android:drawableStart="@drawable/ic_baseline_phone_iphone_24"
         android:ems="10"
@@ -56,13 +62,13 @@
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextTC"
         app:layout_constraintTop_toBottomOf="@+id/editTextGonderenAdSoyad" />
 
     <EditText
         android:id="@+id/editTextTC"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
         android:layout_marginTop="18dp"
         android:background="@drawable/custom_input"
         android:ems="10"
@@ -71,6 +77,7 @@
         android:padding="10dp"
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextGonderenGsmNo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextGonderenAdSoyad" />
 
@@ -96,17 +103,16 @@
     <TextView
         android:id="@+id/alici"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginTop="300dp"
         android:text="Alıcı"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.434"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -166,12 +172,13 @@
         android:id="@+id/buttonKaydet"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="600dp"
         android:background="@drawable/custom_input"
         android:text="Kaydet"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -222,4 +229,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editTextBinaNo"
         app:layout_constraintTop_toBottomOf="@+id/editTextAliciAdres" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

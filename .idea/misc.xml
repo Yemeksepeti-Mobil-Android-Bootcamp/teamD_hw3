@@ -15,10 +15,25 @@
         <entry key="..\:/DEVELOPER/AndroidStudioProjects/cargoApp/app/src/main/res/layout/fragment_third_on_boarding.xml" value="0.36666666666666664" />
         <entry key="..\:/DEVELOPER/AndroidStudioProjects/cargoApp/app/src/main/res/layout/item_cargo.xml" value="0.2015625" />
         <entry key="..\:/DEVELOPER/AndroidStudioProjects/cargoApp/app/src/main/res/menu/menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Osman Sekman/AndroidStudioProjects/teamD_hw3/app/src/main/res/layout/fragment_cargo_add.xml" value="0.25" />
+        <entry key="..\:/Users/Osman Sekman/AndroidStudioProjects/teamD_hw3/app/src/main/res/layout/fragment_cargo_list.xml" value="0.21331521739130435" />
+        <entry key="..\:/Users/Osman Sekman/AndroidStudioProjects/teamD_hw3/app/src/main/res/layout/fragment_change_password.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/Osman Sekman/AndroidStudioProjects/teamD_hw3/app/src/main/res/layout/fragment_first_on_boarding.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/Osman Sekman/AndroidStudioProjects/teamD_hw3/app/src/main/res/layout/fragment_login.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/Osman Sekman/AndroidStudioProjects/teamD_hw3/app/src/main/res/layout/fragment_on_boarding.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/Osman Sekman/AndroidStudioProjects/teamD_hw3/app/src/main/res/layout/fragment_personal_information.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/Osman Sekman/AndroidStudioProjects/teamD_hw3/app/src/main/res/layout/fragment_profile.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/Osman Sekman/AndroidStudioProjects/teamD_hw3/app/src/main/res/layout/fragment_recepient_adresses.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/Osman Sekman/AndroidStudioProjects/teamD_hw3/app/src/main/res/layout/fragment_second_on_boarding.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/Osman Sekman/AndroidStudioProjects/teamD_hw3/app/src/main/res/layout/fragment_sender_adresses.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/Osman Sekman/AndroidStudioProjects/teamD_hw3/app/src/main/res/layout/fragment_splash.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/Osman Sekman/AndroidStudioProjects/teamD_hw3/app/src/main/res/layout/fragment_third_on_boarding.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/Osman Sekman/AndroidStudioProjects/teamD_hw3/app/src/main/res/layout/item_cargo.xml" value="0.3619791666666667" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
