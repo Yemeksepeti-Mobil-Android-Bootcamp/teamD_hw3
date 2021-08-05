@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cargo.CargoRecyclerViewAdapter
-import com.example.cargoapp.ListFragment.Item
 import com.example.cargoapp.MVVM.CargoRepository
 import com.example.cargoapp.databinding.FragmentCargoListBinding
 
@@ -29,7 +28,7 @@ class CargoListFragment: Fragment() {
 
     private fun setData() {
         val repository = CargoRepository()
-         repository.listCargo(){
+         repository.listSendCargo(){
             adapter.setCargoList(it)
         }
     }

@@ -3,10 +3,8 @@ package com.example.cargo
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.cargoapp.ListFragment.Item
 import com.example.cargoapp.databinding.ItemCargoBinding
 import com.example.cargoapp.model.Cargo
-import kotlin.math.log
 
 class CargoRecyclerViewAdapter:RecyclerView.Adapter<CargoRecyclerViewAdapter.CargoViewHolder>() {
     private lateinit var binding: ItemCargoBinding
