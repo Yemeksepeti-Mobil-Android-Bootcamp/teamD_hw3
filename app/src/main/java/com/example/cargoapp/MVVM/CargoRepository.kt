@@ -64,11 +64,11 @@ class CargoRepository {
 
     fun listReceiveCargo(callback: (list: List<Cargo>) -> Unit){
         defineDB()
-        getCurrentUser()
+        var user = getCurrentUser()
         val list : MutableList<Cargo> = mutableListOf()
         database.child("cargo")
             .orderByChild("receiverMail")
-            .equalTo(user.email)
+            .equalTo(user?.email)
             .get().addOnSuccessListener {
 
                 Log.i("firebase", "Got value ${it.value}")
