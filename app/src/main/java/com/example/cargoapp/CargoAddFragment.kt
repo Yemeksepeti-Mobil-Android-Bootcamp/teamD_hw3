@@ -1,14 +1,15 @@
 package com.example.cargoapp
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.cargoapp.MVVM.CargoRepository
 import com.example.cargoapp.databinding.FragmentCargoAddBinding
-import com.example.cargoapp.databinding.FragmentSplashBinding
 import com.example.cargoapp.model.Cargo
+import java.text.SimpleDateFormat
+import java.util.*
 
 class CargoAddFragment : Fragment() {
 
@@ -29,13 +30,41 @@ class CargoAddFragment : Fragment() {
     }
 
     private fun mainFunc() {
+        val currentDateTime = SimpleDateFormat("dd/M/yyyy")
+
         binding.buttonKaydet.setOnClickListener{
-            var cargo:Cargo = Cargo("oktay","11111111111","oktyagca@gmail.com",
-                "ankara","kaan","4444444444","kadirkaansarikaya@gmail.com",
-                "Eskişehir")
+            var cargo:Cargo = Cargo (
+                binding.editTextGonderenAdSoyad.text.toString(),
+                binding.editTextGonderenTC.text.toString(),
+                binding.editTextGonderenEmail.text.toString(),
+                binding.editTextGondericiAdres.text.toString(),
+                binding.editTextAliciAdSoyad.text.toString(),
+                binding.editTextAliciTC.text.toString(),
+                binding.editTextEmailAddress.text.toString(),
+                binding.editTextAliciAdres.text.toString(),
+                currentDateTime.format(Date()),
+                currentDateTime.format(Date())
+
+            )
 
             val repository = CargoRepository()
             repository.addCargo(cargo)
+            clearEditTexts() // degisken tanımlandı
+
+        }
+    }
+
+    private fun clearEditTexts() {
+        binding.apply {
+            editTextGonderenAdSoyad.text.clear()
+            editTextGonderenTC.text.clear()
+            editTextGonderenEmail.text.clear()
+            editTextGondericiAdres.text.clear()
+            editTextAliciAdSoyad.text.clear()
+            editTextAliciTC.text.clear()
+            editTextEmailAddress.text.clear()
+            editTextAliciAdres.text.clear()
+
         }
     }
 
