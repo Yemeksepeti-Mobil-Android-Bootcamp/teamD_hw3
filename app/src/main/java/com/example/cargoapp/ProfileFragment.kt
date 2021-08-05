@@ -31,15 +31,16 @@ class ProfileFragment: Fragment() {
     private fun mainFunc() {
         val auth = FirebaseAuth.getInstance()
         val repository = CargoRepository()
-        val user = repository.getCurrentUser()
+        var user = repository.getCurrentUser()
+        user=auth.currentUser
         binding.apply {
             if (user != null) {
-                name.text = user?.displayName
-                mail.text = user?.email
+                name.text = user.displayName
+                mail.text = user.email
                 Glide.with(imageView.context)
                     .load(user.photoUrl).into(imageView);
                 if(user.phoneNumber !=null) {
-                    phone.text = user?.phoneNumber
+                    phone.text = user.phoneNumber
                 }
                 else{
                     phone.text = "Telefon bilgisi eksik"
