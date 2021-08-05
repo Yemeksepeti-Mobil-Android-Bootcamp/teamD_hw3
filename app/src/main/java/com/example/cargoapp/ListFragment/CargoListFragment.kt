@@ -10,6 +10,7 @@ import com.example.cargo.CargoRecyclerViewAdapter
 import com.example.cargoapp.ListFragment.Item
 import com.example.cargoapp.MVVM.CargoRepository
 import com.example.cargoapp.databinding.FragmentCargoListBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class CargoListFragment: Fragment() {
     private var _binding: FragmentCargoListBinding? = null
@@ -28,8 +29,10 @@ class CargoListFragment: Fragment() {
     }
 
     private fun setData() {
+
         val repository = CargoRepository()
-         repository.listCargo(){
+        repository.getCurrentUser()
+         repository.listSendCargo(){
             adapter.setCargoList(it)
         }
     }
