@@ -31,7 +31,6 @@ class CargoListFragment: Fragment() {
     private fun setData() {
 
         val repository = CargoRepository()
-        repository.getCurrentUser()
          repository.listSendCargo(){
             adapter.setCargoList(it)
         }

@@ -39,6 +39,7 @@ class CargoRepository {
 
     fun listSendCargo(callback: (list: List<Cargo>) -> Unit){
         defineDB()
+        getCurrentUser()
         val list : MutableList<Cargo> = mutableListOf()
         database.child("cargo")
             .orderByChild("senderMail")
@@ -63,6 +64,7 @@ class CargoRepository {
 
     fun listReceiveCargo(callback: (list: List<Cargo>) -> Unit){
         defineDB()
+        getCurrentUser()
         val list : MutableList<Cargo> = mutableListOf()
         database.child("cargo")
             .orderByChild("receiverMail")
