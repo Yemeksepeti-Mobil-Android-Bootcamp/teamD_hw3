@@ -18,10 +18,10 @@ class CargoRepository {
         database = Firebase.database.reference
     }
 
-    fun getCurrentUser(): FirebaseUser {
+    fun getCurrentUser(): FirebaseUser? {
         val auth = FirebaseAuth.getInstance()
         val user = auth.currentUser
-        mail = user!!.email.toString()
+        mail = user?.email.toString()
 
         return user
     }
@@ -29,7 +29,6 @@ class CargoRepository {
     fun writeNewUser(userId: String) {
         defineDB()
         val user = User(userId,null)
-
         database.child("users").child(userId).setValue(user)
     }
     fun addCargo(cargo: Cargo){

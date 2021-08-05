@@ -48,6 +48,7 @@ class LoginFragment : Fragment() {
     }
 
     private fun mainFunc() {
+        auth = FirebaseAuth.getInstance()
         cargoRepository = CargoRepository()
 
         val user = cargoRepository.getCurrentUser()
