@@ -1,7 +1,9 @@
 package com.example.cargoapp.model
 
-import com.example.cargoapp.LoginRegister.Adress
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class Cargo(
     val senderName: String,
     val senderTc:String,
@@ -13,7 +15,7 @@ data class Cargo(
     val receiverAddress:String,
     val receiveDate:String,
     val sendDate:String
-){
+):Parcelable{
     constructor() : this("","","","",
         "","","","","","")
 }

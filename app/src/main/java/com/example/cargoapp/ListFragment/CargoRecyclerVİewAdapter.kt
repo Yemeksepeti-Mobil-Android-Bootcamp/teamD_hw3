@@ -1,6 +1,7 @@
 package com.example.cargo
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cargoapp.databinding.ItemCargoBinding
@@ -8,20 +9,28 @@ import com.example.cargoapp.model.Cargo
 
 class CargoRecyclerViewAdapter:RecyclerView.Adapter<CargoRecyclerViewAdapter.CargoViewHolder>() {
     private lateinit var binding: ItemCargoBinding
+    private lateinit var  onCargoListener :OnCargoListener
     private  var cargoList:List<Cargo> = mutableListOf()
 
-    class CargoViewHolder(private val binding: ItemCargoBinding):RecyclerView.ViewHolder(binding.root){
-        fun setItem(item: Cargo) {
+    class CargoViewHolder(private val binding: ItemCargoBinding):RecyclerView.ViewHolder(binding.root),View.OnClickListener{
+        lateinit var  onCargoListener :OnCargoListener
+        fun setItem(item: Cargo,onCargoListener: OnCargoListener) {
+            this.onCargoListener = onCargoListener
             binding.senderTextView.text = item.senderName
             binding.receiverTextView.text = item.receiverName
-            binding.arrivalDateTextView.text = "asdad"
+            binding.arrivalDateTextView.text = item.receiveDate
             binding.destinationTextView.text = item.receiverAddress
             binding.firstPointTextView.text = item.senderAddress
-            binding.releaseDateTextView.text = "asda"
+            binding.releaseDateTextView.text = item.sendDate
+            binding.button.setOnClickListener(this)
+        }
+        override fun onClick(v: View?) {
+            onCargoListener.OnCargoClick(adapterPosition)
         }
     }
 
-    fun setCargoList(cargoList: List<Cargo>) {
+    fun setCargoList(cargoList: List<Cargo>,onCargoListener: OnCargoListener) {
+        this.onCargoListener =onCargoListener
         this.cargoList = cargoList
         println(cargoList.size)
         notifyDataSetChanged()
@@ -38,8 +47,12 @@ class CargoRecyclerViewAdapter:RecyclerView.Adapter<CargoRecyclerViewAdapter.Car
 
     override fun onBindViewHolder(holder: CargoViewHolder, position: Int) {
         val item = cargoList[position]
-        holder.setItem(item)
+        holder.setItem(item,onCargoListener)
     }
 
     override fun getItemCount():Int  = cargoList.size
+}
+
+interface OnCargoListener{
+     fun OnCargoClick(position:Int)
 }
