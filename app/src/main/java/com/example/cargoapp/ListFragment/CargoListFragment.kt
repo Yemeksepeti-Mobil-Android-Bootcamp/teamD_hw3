@@ -36,7 +36,8 @@ class CargoListFragment: Fragment() ,OnCargoListener {
     private fun setData() {
         val repository = CargoRepository()
         repository.getCargos(){
-            adapter.setCargoList(it)
+            cargoList = it
+            adapter.setCargoList(it,this)
         }
     }
 
