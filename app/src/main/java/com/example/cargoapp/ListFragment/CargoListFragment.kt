@@ -18,7 +18,7 @@ class CargoListFragment: Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentCargoListBinding.inflate(inflater, container, false)
         val view = _binding!!.root
         initViews()
@@ -28,14 +28,18 @@ class CargoListFragment: Fragment() {
 
     private fun setData() {
         val repository = CargoRepository()
-         repository.listSendCargo(){
+        repository.getCargos(){
             adapter.setCargoList(it)
         }
     }
 
     private fun initViews() {
-
         _binding!!.recyclerView.layoutManager = LinearLayoutManager(context)
         _binding!!.recyclerView.adapter = adapter
+    }
+
+    override fun onResume() {
+        super.onResume()
+        setData()
     }
 }

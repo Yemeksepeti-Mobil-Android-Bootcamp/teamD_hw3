@@ -15,18 +15,10 @@ class MainFragmentAdapter(requireActivity: FragmentActivity) : FragmentStateAdap
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
-            0 ->{
-                CargoAddFragment()
-            }
-            1 ->{
-                CargoListFragment()
-            }
-            2 ->{
-                ProfileFragment()
-            }
-            else -> {
-                FirstOnBoardingFragment()
-            }
+            0 -> CargoAddFragment()
+            1 -> CargoListFragment()
+            2 -> ProfileFragment()
+            else ->CargoAddFragment()
         }
     }
 }
