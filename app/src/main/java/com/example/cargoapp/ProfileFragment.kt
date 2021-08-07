@@ -21,7 +21,7 @@ class ProfileFragment: Fragment() {
         override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
-        ): View? {
+        ): View {
             _binding = FragmentProfileBinding.inflate(inflater, container, false)
             val view = binding.root
             mainFunc()
@@ -29,16 +29,14 @@ class ProfileFragment: Fragment() {
         }
 
     private fun mainFunc() {
-        val auth = FirebaseAuth.getInstance()
         val repository = CargoRepository()
-        var user = repository.getCurrentUser()
-        user=auth.currentUser
+        val user = repository.getCurrentUser()
         binding.apply {
             if (user != null) {
                 name.text = user.displayName
                 mail.text = user.email
                 Glide.with(imageView.context)
-                    .load(user.photoUrl).into(imageView);
+                    .load(user.photoUrl).into(imageView)
                 if(user.phoneNumber !=null) {
                     phone.text = user.phoneNumber
                 }
@@ -54,5 +52,8 @@ class ProfileFragment: Fragment() {
         }
     }
 
-
+    override fun onResume() {
+        super.onResume()
+        mainFunc()
+    }
 }

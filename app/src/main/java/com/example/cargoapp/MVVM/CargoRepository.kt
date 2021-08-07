@@ -13,77 +13,95 @@ class CargoRepository {
 
     private lateinit var database: DatabaseReference
 
-    private fun defineDB(){
+    private fun defineDB() {
         database = Firebase.database.reference
     }
 
     fun getCurrentUser(): FirebaseUser? {
         val auth = FirebaseAuth.getInstance()
-        val user = auth.currentUser
-        return user
+        return auth.currentUser
     }
 
     fun writeNewUser(userId: String) {
         defineDB()
-        val user = User(userId,null)
+        val user = User(userId, null)
         database.child("users").child(userId).setValue(user)
     }
-    fun addCargo(cargo: Cargo){
+
+    fun addCargo(cargo: Cargo) {
         defineDB()
         database.child("cargo").push().setValue(cargo)
     }
 
-    fun listSendCargo(callback: (list: List<Cargo>) -> Unit){
-        defineDB()
-        var user = getCurrentUser()
+    fun getCargos(callback: (list: List<Cargo>) -> Unit){
+        var sendList: List<Cargo>
+        var receiveList: List<Cargo>
+        listSendCargo {
+            sendList=it
+            listReceiveCargo{
+                receiveList=it
+                Log.d("Repository", "getCargos: "+sendList.size+"-"+receiveList.size)
 
-        val list : MutableList<Cargo> = mutableListOf()
-        if (user == null) {
-            user=getCurrentUser()
-        }
-        database.child("cargo")
-            .orderByChild("senderMail")
-            .equalTo(user?.email)
-            .get().addOnSuccessListener {
-
-                Log.i("firebase", "Got value ${it.value}")
-                val children = it!!.children
-
-                children.forEach {
-                    var cargo = it.getValue(Cargo::class.java)
-                    if (cargo != null) {
-                        println(cargo)
-                        list.add(cargo)
-                    }
-                }
-                callback(list)
-            }.addOnFailureListener{
-                Log.e("firebase", "Error getting data", it)
+                callback(sendList+receiveList)
             }
+        }
     }
 
-    fun listReceiveCargo(callback: (list: List<Cargo>) -> Unit){
+    fun listSendCargo(callback: (list: List<Cargo>) -> Unit) {
         defineDB()
-        var user = getCurrentUser()
-        val list : MutableList<Cargo> = mutableListOf()
-        database.child("cargo")
-            .orderByChild("receiverMail")
-            .equalTo(user?.email)
-            .get().addOnSuccessListener {
+        val user = getCurrentUser()
 
-                Log.i("firebase", "Got value ${it.value}")
-                val children = it!!.children
+        val list: MutableList<Cargo> = mutableListOf()
+        if (user != null) {
+            database.child("cargo")
+                .orderByChild("senderMail")
+                .equalTo(user.email)
+                .get().addOnSuccessListener {
 
-                children.forEach {
-                    var cargo = it.getValue(Cargo::class.java)
-                    if (cargo != null) {
-                        println(cargo)
-                        list.add(cargo)
+                    Log.i("firebase", "Got value ${it.value}")
+                    val children = it!!.children
+
+                    children.forEach {
+                        val cargo = it.getValue(Cargo::class.java)
+                        if (cargo != null) {
+                            println(cargo)
+                            list.add(cargo)
+                        }
                     }
+                    callback(list)
+                }.addOnFailureListener {
+                    Log.e("firebase", "Error getting data", it)
                 }
-                callback(list)
-            }.addOnFailureListener{
-                Log.e("firebase", "Error getting data", it)
-            }
+
+        }
+
+
+    }
+
+    fun listReceiveCargo(callback: (list: List<Cargo>) -> Unit) {
+        defineDB()
+        val user = getCurrentUser()
+        val list: MutableList<Cargo> = mutableListOf()
+        if (user != null) {
+            database.child("cargo")
+                .orderByChild("receiverMail")
+                .equalTo(user.email)
+                .get().addOnSuccessListener {
+
+                    Log.i("firebase", "Got value ${it.value}")
+                    val children = it!!.children
+
+                    children.forEach {
+                        val cargo = it.getValue(Cargo::class.java)
+                        if (cargo != null) {
+                            println(cargo)
+                            list.add(cargo)
+                        }
+                    }
+                    callback(list)
+                }.addOnFailureListener {
+                    Log.e("firebase", "Error getting data", it)
+                }
+        }
     }
 }

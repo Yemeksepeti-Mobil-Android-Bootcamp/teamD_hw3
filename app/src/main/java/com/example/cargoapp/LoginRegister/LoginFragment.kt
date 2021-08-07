@@ -27,7 +27,7 @@ class LoginFragment : Fragment() {
     private lateinit var mGoogleSignInClient: GoogleSignInClient
     private lateinit var acct: GoogleSignInAccount
     private lateinit var auth: FirebaseAuth
-    private lateinit var cargoRepository :CargoRepository
+    private lateinit var cargoRepository: CargoRepository
 
     private val RC_SIGN_IN: Int = 1
 
@@ -52,12 +52,12 @@ class LoginFragment : Fragment() {
         cargoRepository = CargoRepository()
 
         val user = cargoRepository.getCurrentUser()
-        if(user != null){
+        if (user != null) {
             findNavController().navigate(R.id.action_loginFragment_to_mainFragment)
         }
 
         createRequest()
-        binding.signInButton.setOnClickListener{
+        binding.signInButton.setOnClickListener {
             signIn()
         }
     }
@@ -128,7 +128,6 @@ class LoginFragment : Fragment() {
         }
     }
 
-
     private fun handleSignInResult() {
         try {
             findNavController().navigate(R.id.action_loginFragment_to_mainFragment)
@@ -136,9 +135,6 @@ class LoginFragment : Fragment() {
             Log.w("pprofile", "signInResult:failed code=" + e.statusCode)
         }
     }
-
-
-
 
     override fun onDestroyView() {
         super.onDestroyView()

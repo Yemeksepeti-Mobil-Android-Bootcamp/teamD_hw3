@@ -12,6 +12,7 @@ import com.example.cargoapp.databinding.FragmentMainBinding
 class MainFragment : Fragment() {
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
+    private lateinit var adapter:MainFragmentAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -55,7 +56,7 @@ class MainFragment : Fragment() {
     }
 
     private fun setViewPager() {
-        val adapter = MainFragmentAdapter(requireActivity())
+        adapter = MainFragmentAdapter(requireActivity())
         binding.viewPager2.isUserInputEnabled = false
         binding.viewPager2.adapter = adapter
         binding.viewPager2.currentItem = 1

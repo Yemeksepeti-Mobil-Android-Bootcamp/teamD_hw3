@@ -25,7 +25,7 @@ class CargoListFragment: Fragment() ,OnCargoListener {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentCargoListBinding.inflate(inflater, container, false)
         val view = _binding!!.root
         initViews()
@@ -35,19 +35,21 @@ class CargoListFragment: Fragment() ,OnCargoListener {
 
     private fun setData() {
         val repository = CargoRepository()
-         repository.listSendCargo(){
-             cargoList = it
-            adapter.setCargoList(it,this)
+        repository.getCargos(){
+            adapter.setCargoList(it)
         }
-
     }
 
     private fun initViews() {
-
         _binding!!.recyclerView.layoutManager = LinearLayoutManager(context)
         _binding!!.recyclerView.adapter = adapter
     }
 
+    override fun onResume() {
+        super.onResume()
+        setData()
+    }
+    
     override fun OnCargoClick(position: Int) {
         val cargoItem:Cargo = cargoList.get(position)
         val action = MainFragmentDirections.actionMainFragmentToDetailFragment(cargoItem)
