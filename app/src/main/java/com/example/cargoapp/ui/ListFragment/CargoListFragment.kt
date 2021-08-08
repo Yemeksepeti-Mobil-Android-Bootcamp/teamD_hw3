@@ -1,20 +1,18 @@
-package com.example.cargoapp.ListFragment
+package com.example.cargoapp.ui.ListFragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cargo.CargoRecyclerViewAdapter
 import com.example.cargo.OnCargoListener
-import com.example.cargoapp.MVVM.CargoRepository
-import com.example.cargoapp.MainFragmentDirections
-import com.example.cargoapp.R
+import com.example.cargoapp.mvvm.CargoRepository
 import com.example.cargoapp.databinding.FragmentCargoListBinding
 import com.example.cargoapp.model.Cargo
+import com.example.cargoapp.ui.MainFragmentDirections
 
 class CargoListFragment: Fragment() ,OnCargoListener {
     private var _binding: FragmentCargoListBinding? = null

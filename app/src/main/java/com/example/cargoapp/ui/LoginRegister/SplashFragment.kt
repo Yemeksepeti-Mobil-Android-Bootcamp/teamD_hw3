@@ -1,4 +1,4 @@
-package com.example.cargoapp.LoginRegister
+package com.example.cargoapp.ui.LoginRegister
 
 import android.animation.Animator
 import android.content.Context

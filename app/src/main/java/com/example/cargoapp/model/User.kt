@@ -1,11 +1,5 @@
-package com.example.cargoapp.LoginRegister
+package com.example.cargoapp.ui.LoginRegister
 
 data class User(
-    var id: String? = null,
-    var addresses: List<Adress>?
-)
-
-data class  Adress(
-    var addressName: String? = null,
-    var adress: String? = null
+    var id: String? = null
 )

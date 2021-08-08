@@ -1,4 +1,4 @@
-package com.example.cargoapp
+package com.example.cargoapp.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
-import com.example.cargoapp.MVVM.CargoRepository
+import com.example.cargoapp.mvvm.CargoRepository
+import com.example.cargoapp.R
 import com.example.cargoapp.databinding.FragmentProfileBinding
 import com.google.firebase.auth.FirebaseAuth
 
