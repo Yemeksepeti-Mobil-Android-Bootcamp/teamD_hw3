@@ -22,7 +22,7 @@ class CargoRecyclerViewAdapter:RecyclerView.Adapter<CargoRecyclerViewAdapter.Car
             binding.destinationTextView.text = item.receiverAddress
             binding.firstPointTextView.text = item.senderAddress
             binding.releaseDateTextView.text = item.sendDate
-            binding.button.setOnClickListener(this)
+            binding.cardView.setOnClickListener(this)
         }
         override fun onClick(v: View?) {
             onCargoListener.OnCargoClick(adapterPosition)

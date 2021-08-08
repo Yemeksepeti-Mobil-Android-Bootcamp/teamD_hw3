@@ -34,7 +34,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/custom_input"
                 android:backgroundTint="@color/white"
-                android:text="Gönderici Ad Soyad:"
+                android:text="Gönderici Ad Soyad"
                 android:textSize="20sp" />
 
             <TextView
@@ -55,7 +55,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/custom_input"
                 android:backgroundTint="@color/white"
-                android:text="Gönderici TC:"
+                android:text="Gönderici TC"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -164,7 +164,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/custom_input"
                 android:backgroundTint="@color/white"
-                android:text="Alıcı Ad Soyad:"
+                android:text="Alıcı Ad Soyad"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
