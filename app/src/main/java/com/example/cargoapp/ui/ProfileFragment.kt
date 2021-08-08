@@ -30,6 +30,7 @@ class ProfileFragment: Fragment() {
         }
 
     private fun mainFunc() {
+        val auth = FirebaseAuth.getInstance()
         val repository = CargoRepository()
         val user = repository.getCurrentUser()
         binding.apply {
@@ -38,7 +39,7 @@ class ProfileFragment: Fragment() {
                 mail.text = user.email
                 Glide.with(imageView.context)
                     .load(user.photoUrl).into(imageView)
-                if(user.phoneNumber !=null) {
+                if(!user.phoneNumber.isNullOrEmpty()) {
                     phone.text = user.phoneNumber
                 }
                 else{
