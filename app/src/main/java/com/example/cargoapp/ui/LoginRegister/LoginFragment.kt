@@ -1,4 +1,4 @@
-package com.example.cargoapp.LoginRegister
+package com.example.cargoapp.ui.LoginRegister
 
 import android.content.ContentValues.TAG
 import android.content.Intent
@@ -10,7 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import com.example.cargoapp.MVVM.CargoRepository
+import com.example.cargoapp.mvvm.CargoRepository
 import com.example.cargoapp.R
 import com.example.cargoapp.databinding.FragmentLoginBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn

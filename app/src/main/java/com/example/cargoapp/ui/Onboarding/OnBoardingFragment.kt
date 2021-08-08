@@ -1,4 +1,4 @@
-package com.example.cargoapp.Onboarding
+package com.example.cargoapp.ui.Onboarding
 
 import android.content.Context
 import android.os.Bundle

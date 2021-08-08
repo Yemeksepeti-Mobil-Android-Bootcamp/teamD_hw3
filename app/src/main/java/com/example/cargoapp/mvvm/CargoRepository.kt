@@ -1,7 +1,7 @@
-package com.example.cargoapp.MVVM
+package com.example.cargoapp.mvvm
 
 import android.util.Log
-import com.example.cargoapp.LoginRegister.User
+import com.example.cargoapp.ui.LoginRegister.User
 import com.example.cargoapp.model.Cargo
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -24,7 +24,7 @@ class CargoRepository {
 
     fun writeNewUser(userId: String) {
         defineDB()
-        val user = User(userId, null)
+        val user = User(userId)
         database.child("users").child(userId).setValue(user)
     }
 

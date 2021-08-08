@@ -1,11 +1,11 @@
-package com.example.cargoapp
+package com.example.cargoapp.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.cargoapp.MVVM.CargoRepository
+import com.example.cargoapp.mvvm.CargoRepository
 import com.example.cargoapp.databinding.FragmentCargoAddBinding
 import com.example.cargoapp.model.Cargo
 import java.text.SimpleDateFormat

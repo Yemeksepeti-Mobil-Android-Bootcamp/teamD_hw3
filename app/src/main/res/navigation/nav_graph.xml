@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.cargoapp.LoginRegister.SplashFragment"
+        android:name="com.example.cargoapp.ui.LoginRegister.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/onBoardingFragment"
-        android:name="com.example.cargoapp.Onboarding.OnBoardingFragment"
+        android:name="com.example.cargoapp.ui.Onboarding.OnBoardingFragment"
         android:label="fragment_on_boarding"
         tools:layout="@layout/fragment_on_boarding" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.cargoapp.MainFragment"
+        android:name="com.example.cargoapp.ui.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.cargoapp.LoginRegister.LoginFragment"
+        android:name="com.example.cargoapp.ui.LoginRegister.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -49,7 +49,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.example.cargoapp.DetailFragment"
+        android:name="com.example.cargoapp.ui.DetailFragment"
         android:label="DetailFragment" >
         <argument
             android:name="corgoItem"

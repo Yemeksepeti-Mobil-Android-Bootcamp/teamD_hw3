@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/custom_circle_layout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".LoginRegister.LoginFragment"
+    tools:context=".ui.LoginRegister.LoginFragment"
     android:padding="50dp">
 
 
