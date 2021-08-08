@@ -92,7 +92,7 @@ class LoginFragment : Fragment() {
                 Log.d(TAG, "firebaseAuthWithGoogle:" + account.id)
                 firebaseAuthWithGoogle(account.idToken!!)
 
-                handleSignInResult()
+
 
             } catch (e: ApiException) {
 
@@ -114,25 +114,20 @@ class LoginFragment : Fragment() {
                         // Sign in success, update UI with the signed-in user's information
                         Log.d(TAG, "signInWithCredential:success")
                         val user = auth.currentUser
+                        Log.d(TAG, "firebaseAuthWithGoogle: GİRDİ")
 
 
                         if (user != null) {
                             cargoRepository.writeNewUser(user.uid)
                         }
 
+                        findNavController().navigate(R.id.action_loginFragment_to_mainFragment)
+
                     } else {
                         // If sign in fails, display a message to the user.
                         Log.w(TAG, "signInWithCredential:failure", task.exception)
                     }
                 }
-        }
-    }
-
-    private fun handleSignInResult() {
-        try {
-            findNavController().navigate(R.id.action_loginFragment_to_mainFragment)
-        } catch (e: ApiException) {
-            Log.w("pprofile", "signInResult:failed code=" + e.statusCode)
         }
     }
 
