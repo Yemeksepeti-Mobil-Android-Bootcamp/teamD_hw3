@@ -7,7 +7,7 @@ import com.example.cargoapp.ui.Onboarding.FirstOnBoardingFragment
 import com.example.cargoapp.ui.Onboarding.SecondOnBoardingFragment
 import com.example.cargoapp.ui.Onboarding.ThirdOnBoardingFragment
 
-private const val FRAGMENT_COUNT = 2
+private const val FRAGMENT_COUNT = 3
 
 class OnboardingAdapter(requireActivity: FragmentActivity) : FragmentStateAdapter(requireActivity) {
 
@@ -18,7 +18,7 @@ class OnboardingAdapter(requireActivity: FragmentActivity) : FragmentStateAdapte
         return when (position) {
             0 -> FirstOnBoardingFragment()
             1 -> SecondOnBoardingFragment()
-            3 -> ThirdOnBoardingFragment()
+            2 -> ThirdOnBoardingFragment()
             else -> FirstOnBoardingFragment()
         }
     }
