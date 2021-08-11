@@ -19,5 +19,6 @@
 - Oktay Ağca
 
 ## Screen Record<p>
-<img src=https://github.com/Yemeksepeti-Mobil-Android-Bootcamp/teamD_hw3/tree/main/ss/ScreenRecorder.gif  width="208" height="432"/>
+<img src="https://github.com/Yemeksepeti-Mobil-Android-Bootcamp/teamD_hw3/blob/main/ss/ScreenRecorder.gif"  width="208" height="432"/>
+
 
